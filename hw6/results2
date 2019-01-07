@@ -1,0 +1,83 @@
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 8
+model name	: Pentium III (Coppermine)
+stepping	: 10
+cpu MHz		: 999.889
+cache size	: 256 KB
+fdiv_bug	: no
+hlt_bug		: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 2
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 mmx fxsr sse
+bogomips	: 1966.08
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 8
+model name	: Pentium III (Coppermine)
+stepping	: 10
+cpu MHz		: 999.889
+cache size	: 256 KB
+fdiv_bug	: no
+hlt_bug		: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 2
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 mmx fxsr sse
+bogomips	: 1994.75
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Qsort
+////////////////////////////////////////////////////////////////////////////////
+
+Ascending       Descending      Random
+0.00205803      0.00235391      0.00321698
+0.002069        0.00233698      0.003232
+0.00206685      0.00236678      0.00320888
+0.00207686      0.00235581      0.00320888
+0.00207305      0.00235081      0.00319791
+
+////////////////////////////////////////////////////////////////////////////////
+// Insertion
+////////////////////////////////////////////////////////////////////////////////
+
+Ascending       Descending      Random
+0.000280857     0.251315        0.144648
+0.000255108     0.261319        0.134674
+0.000263929     0.259524        0.126275
+0.000258923     0.251289        0.14466
+0.000250816     0.251261        0.124651
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Radix
+////////////////////////////////////////////////////////////////////////////////
+
+Ascending       Descending      Random
+0.0195141       0.0198429       0.019784
+0.019495        0.019439        0.019841
+0.0198591       0.0197389       0.029583
+0.0205619       0.020695        0.030412
+0.019419        0.0193291       0.0199261
+
+Results using radix sort with pow()
+
+Ascending       Descending      Random
+0.0456109       0.0453501       0.0452929
+0.0455568       0.0454109       0.0452669
+0.0454788       0.0533569       0.0453851
+0.046865        0.0453391       0.045311
+0.045608        0.0457361       0.0458219
+
+

@@ -1,0 +1,10 @@
+set xlabel "Different Iterations (I think)" 
+set ylabel "Runtime in Seconds (pretty sure)"
+set title "Runtime for Insertion Sort (Apparently)"
+plot "bad_insertion_results" using 1 title "Ascending" with linespoints, \
+     "bad_insertion_results" using 2 title "Descending" with linespoints, \
+     "bad_insertion_results" using 3 title "Random" with linespoints, \
+     "good_insertion_results" using 1 title "Ascending Fast" with linespoints, \
+     "good_insertion_results" using 2 title "Descending Fast" with linespoints, \
+     "good_insertion_results" using 3 title "Random Fast" with linespoints 
+

@@ -1,0 +1,2 @@
+plot "slow_radix" using 1 title "Ascending" with linespoints, "slow_radix" using 2 title "Descending" with linespoints, "slow_radix" using 3 title "Random" with linespoints, "radix_results" using 1 title "Ascending Fast" with linespoints, "radix_results" using 2 title "Descending Fast" with linespoints, "radix_results" using 3 title "Random Fast" with linespoints 
+

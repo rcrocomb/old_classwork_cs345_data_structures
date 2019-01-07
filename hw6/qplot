@@ -1,0 +1,2 @@
+plot "bad_qsort_results" using 1 title "Ascending" with linespoints, "bad_qsort_results" using 2 title "Descending" with linespoints, "bad_qsort_results" using 3 title "Random" with linespoints, "good_qsort_results" using 1 title "Ascending Fast" with linespoints, "good_qsort_results" using 2 title "Descending Fast" with linespoints, "good_qsort_results" using 3 title "Random Fast" with linespoints 
+
