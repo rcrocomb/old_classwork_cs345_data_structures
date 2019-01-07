@@ -1,0 +1,90 @@
+0
+Before: 36 09 09 48 
+Stack depth is 2
+Stack depth is 2
+After:  09 09 36 48 
+
+1
+Before: 44 23 82 92 56 55 05 75 01 24 29 86 
+Stack depth is 2
+Stack depth is 3
+Stack depth is 4
+Stack depth is 3
+Stack depth is 2
+Stack depth is 2
+Stack depth is 2
+After:  01 05 23 24 29 44 55 56 75 82 86 92 
+
+2
+Before: 91 51 80 18 87 56 07 80 97 11 88 77 
+Stack depth is 2
+Stack depth is 3
+Stack depth is 3
+Stack depth is 2
+Stack depth is 2
+Stack depth is 2
+After:  07 11 18 51 56 77 80 80 87 88 91 97 
+
+3
+Before: 25 01 
+Stack depth is 2
+After:  01 25 
+
+4
+Before: 67 67 74 00 61 12 61 76 
+Stack depth is 2
+Stack depth is 3
+Stack depth is 2
+Stack depth is 2
+After:  00 12 61 61 67 67 74 76 
+
+5
+Before: 49 50 31 69 
+Stack depth is 2
+Stack depth is 2
+After:  31 49 50 69 
+
+6
+Before: 86 36 51 42 53 66 16 82 
+Stack depth is 2
+Stack depth is 2
+Stack depth is 3
+Stack depth is 2
+After:  16 36 42 51 53 66 82 86 
+
+7
+Before: 76 05 95 33 08 26 07 66 80 45 56 50 58 73 86 57 95 33 38 
+Stack depth is 2
+Stack depth is 3
+Stack depth is 4
+Stack depth is 3
+Stack depth is 3
+Stack depth is 2
+Stack depth is 3
+Stack depth is 3
+Stack depth is 2
+Stack depth is 2
+Stack depth is 2
+After:  05 07 08 26 33 33 38 45 50 56 57 58 66 73 76 80 86 95 95 
+
+8
+Before: 11 84 80 94 
+Stack depth is 2
+Stack depth is 2
+After:  11 80 84 94 
+
+9
+Before: 13 67 12 00 00 19 58 37 02 46 77 43 28 84 52 72 26 77 46 19 
+Stack depth is 2
+Stack depth is 3
+Stack depth is 3
+Stack depth is 3
+Stack depth is 2
+Stack depth is 3
+Stack depth is 3
+Stack depth is 2
+Stack depth is 3
+Stack depth is 2
+Stack depth is 2
+After:  00 00 02 12 13 19 19 26 28 37 43 46 46 52 58 67 72 77 77 84 
+
