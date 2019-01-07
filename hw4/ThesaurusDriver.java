@@ -1,0 +1,186 @@
+/*
+ * Created on Mar 11, 2004
+ */
+
+/**
+ * @author Dr. Westbrook
+ *
+ */
+// though a lot of tests are here, this is not exhaustive...
+public class ThesaurusDriver
+{
+	public static Thesaurus buildTree()
+	{
+		Thesaurus t = new Thesaurus();
+
+	// same code as in insert cases
+		TextReader synFile = new TextReader("syn1.txt");
+		TextReader kb = new TextReader();
+
+		String word, syn;
+		while (synFile.ready()){
+			word = synFile.readWord();
+			syn = synFile.readWord();
+			t.insert(word,syn);
+		}
+	// add a few other cases to make things more interesting
+		t.insert("poor", "impoverished");
+	// end of insert cases
+
+		System.out.println("Starting tree: ");
+		t.printTree();
+		return t;
+	}
+
+	public static void main(String[] args)
+	{
+		Thesaurus t = buildTree();
+	// begin remove cases
+
+		System.out.println("-----------------------------------");
+		System.out.println("ROUND 1");
+		System.out.println("-----------------------------------");
+
+		// simple right child remove
+		t.remove("happy");
+		System.out.println("remove happy:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		// simple left child remove
+		t.remove("sad");
+		System.out.println("remove sad:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		// get to a left rotation
+		t.remove("amber");
+		System.out.println("remove amber:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+		t.remove("blue");
+		System.out.println("remove blue:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		// get to a right rotation
+		t.remove("violet");
+		System.out.println("remove violet:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		t.remove("yellow");
+		System.out.println("remove yellow:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		// get a right-left rotation
+		t.remove("nervous");
+		System.out.println("remove nervous:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+
+		t = buildTree();
+		System.out.println("-----------------------------------");
+		System.out.println("ROUND 2");
+		System.out.println("-----------------------------------");
+
+		t.remove("picky");
+		System.out.println("remove picky:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		t.remove("sad");
+		System.out.println("remove sad:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		t.remove("yellow");
+		System.out.println("remove yellow:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+
+		t.remove("blue");
+		System.out.println("remove blue:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		t.remove("happy");
+		System.out.println("remove happy:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		t.remove("amber");
+		System.out.println("remove amber:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		// get a left-right rotation
+		t.remove("violet");
+		System.out.println("remove violet:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+
+		t = buildTree();
+		System.out.println("-----------------------------------");
+		System.out.println("ROUND 3");
+		System.out.println("-----------------------------------");
+
+		// element not in tree test
+		if (t.remove("ninja") != null)
+			System.out.println("ninja not in tree, but remove('ninja') returned");
+		else
+			System.out.println("passed:  remove('ninja') returned null");
+
+		// do a remove and insert new for happy
+		t.removeAndInsertNew("happy");
+		System.out.println("removeAndInsertNew happy:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		t.removeAndInsertNew("cheerful");
+		System.out.println("removeAndInsertNew cheerful:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		t.removeAndInsertNew("delighted");
+		System.out.println("removeAndInsertNew delighted:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		t.removeAndInsertNew("red");
+		System.out.println("removeAndInsertNew red:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+
+		// upper case cases...
+		t.insert("NINJA", "ROGUE");
+		System.out.println("insert NINJA:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		String s =  t.nextSyn("HAPPY");
+		if (s.equals("cheerful"))
+			System.out.println("passed on next synonym for HAPPY");
+		else
+			System.out.println("failed on next synonym for HAPPY");
+		t.printTree();
+		System.out.println("\n\n"+ t.toString());
+		System.out.println("-----------------------------------");
+
+		t.remove("MaRoON");
+		System.out.println("remove MaRoON:");
+		t.printTree();
+		System.out.println("-----------------------------------");
+
+		t.removeAndInsertNew("hAppY");
+		System.out.println("removeAndInsertNew hAppY:");
+		t.printTree();
+		System.out.println("\n\n"+ t.toString());
+		System.out.println("-----------------------------------");
+	}
+}
